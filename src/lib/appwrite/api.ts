@@ -378,7 +378,7 @@ export async function deletePost(postId: string, imageId: string ) {
 
 
 // ============================== GET INFINITE POSTS
-export async function getInfinitePosts({ pageParam }: { pageParam: number }) {
+export async function getInfinitePosts({ pageParam  }: { pageParam: number }) {
     
     const queries : any[] = [Query.orderDesc('$updatedAt'), Query.limit(10)]
     if(pageParam){
@@ -394,7 +394,7 @@ export async function getInfinitePosts({ pageParam }: { pageParam: number }) {
 
       if(!posts) throw Error;
 
-      return posts
+      return posts 
   } catch (error) {
       console.log(error)
   }
